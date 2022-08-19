@@ -50,22 +50,46 @@ def desenha():
     global a
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)    
     glLoadIdentity()       
-    glTranslatef(0.0,0.0,-3.0)
-    glRotatef(a,1.0,0.0,0.0)      
+    glTranslatef(0.0, 0.0, -5.0)
+    glRotatef(a, 0.8, 1.2, 0.0)      
     glBindTexture(GL_TEXTURE_2D, texture)
-    glBegin(GL_QUADS)              
-    glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, -1.0)    
-    glTexCoord2f(1.0, 0.0); glVertex3f( 1.0, -1.0, -1.0)   
-    glTexCoord2f(1.0, 1.0); glVertex3f( 1.0,  1.0, -1.0)   
-    glTexCoord2f(0.0, 1.0); glVertex3f(-1.0,  1.0, -1.0)  
-    glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, +1.0)    
-    glTexCoord2f(1.0, 0.0); glVertex3f( 1.0, -1.0, +1.0)   
-    glTexCoord2f(1.0, 1.0); glVertex3f( 1.0,  1.0, +1.0)   
-    glTexCoord2f(0.0, 1.0); glVertex3f(-1.0,  1.0, +1.0)  
-    glEnd()
-    a += 0.02
+    glBegin(GL_QUADS)         
+    # fixando o valor de Z
+        glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, -1.0)    
+        glTexCoord2f(1.0, 0.0); glVertex3f( 1.0, -1.0, -1.0)   
+        glTexCoord2f(1.0, 1.0); glVertex3f( 1.0,  1.0, -1.0)   
+        glTexCoord2f(0.0, 1.0); glVertex3f(-1.0,  1.0, -1.0)  
 
-WINDOW_WIDTH = 600
+        glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, +1.0)    
+        glTexCoord2f(1.0, 0.0); glVertex3f( 1.0, -1.0, +1.0)   
+        glTexCoord2f(1.0, 1.0); glVertex3f( 1.0,  1.0, +1.0)   
+        glTexCoord2f(0.0, 1.0); glVertex3f(-1.0,  1.0, +1.0)  
+
+    # fixando o valor de Y
+        glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, -1.0)    
+        glTexCoord2f(1.0, 0.0); glVertex3f( 1.0, -1.0, -1.0)   
+        glTexCoord2f(1.0, 1.0); glVertex3f( 1.0, -1.0,  1.0)   
+        glTexCoord2f(0.0, 1.0); glVertex3f(-1.0, -1.0,  1.0)  
+
+        glTexCoord2f(0.0, 0.0); glVertex3f(-1.0,  1.0, -1.0)    
+        glTexCoord2f(1.0, 0.0); glVertex3f( 1.0,  1.0, -1.0)   
+        glTexCoord2f(1.0, 1.0); glVertex3f( 1.0,  1.0,  1.0)   
+        glTexCoord2f(0.0, 1.0); glVertex3f(-1.0,  1.0,  1.0) 
+        
+    # fixando o valor de X
+        glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, -1.0)    
+        glTexCoord2f(1.0, 0.0); glVertex3f(-1.0,  1.0, -1.0)   
+        glTexCoord2f(1.0, 1.0); glVertex3f(-1.0,  1.0,  1.0)   
+        glTexCoord2f(0.0, 1.0); glVertex3f(-1.0, -1.0,  1.0)  
+
+        glTexCoord2f(0.0, 0.0); glVertex3f(1.0, -1.0, -1.0)    
+        glTexCoord2f(1.0, 0.0); glVertex3f(1.0,  1.0, -1.0)   
+        glTexCoord2f(1.0, 1.0); glVertex3f(1.0,  1.0,  1.0)   
+        glTexCoord2f(0.0, 1.0); glVertex3f(1.0, -1.0,  1.0)
+    glEnd()
+    a += 0.0035
+
+WINDOW_WIDTH = 700
 WINDOW_HEIGHT = 400
 
 sdl2.SDL_Init(sdl2.SDL_INIT_EVERYTHING)
