@@ -54,38 +54,39 @@ def desenha():
     glRotatef(a, 0.8, 1.2, 0.0)      
     glBindTexture(GL_TEXTURE_2D, texture)
     glBegin(GL_QUADS)         
-    # fixando o valor de Z
-        glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, -1.0)    
-        glTexCoord2f(1.0, 0.0); glVertex3f( 1.0, -1.0, -1.0)   
-        glTexCoord2f(1.0, 1.0); glVertex3f( 1.0,  1.0, -1.0)   
-        glTexCoord2f(0.0, 1.0); glVertex3f(-1.0,  1.0, -1.0)  
+# fixando o valor de Z
+    glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, -1.0)    
+    glTexCoord2f(1.0, 0.0); glVertex3f( 1.0, -1.0, -1.0)   
+    glTexCoord2f(1.0, 1.0); glVertex3f( 1.0,  1.0, -1.0)   
+    glTexCoord2f(0.0, 1.0); glVertex3f(-1.0,  1.0, -1.0)  
 
-        glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, +1.0)    
-        glTexCoord2f(1.0, 0.0); glVertex3f( 1.0, -1.0, +1.0)   
-        glTexCoord2f(1.0, 1.0); glVertex3f( 1.0,  1.0, +1.0)   
-        glTexCoord2f(0.0, 1.0); glVertex3f(-1.0,  1.0, +1.0)  
+    glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, +1.0)    
+    glTexCoord2f(1.0, 0.0); glVertex3f( 1.0, -1.0, +1.0)   
+    glTexCoord2f(1.0, 1.0); glVertex3f( 1.0,  1.0, +1.0)   
+    glTexCoord2f(0.0, 1.0); glVertex3f(-1.0,  1.0, +1.0)  
 
-    # fixando o valor de Y
-        glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, -1.0)    
-        glTexCoord2f(1.0, 0.0); glVertex3f( 1.0, -1.0, -1.0)   
-        glTexCoord2f(1.0, 1.0); glVertex3f( 1.0, -1.0,  1.0)   
-        glTexCoord2f(0.0, 1.0); glVertex3f(-1.0, -1.0,  1.0)  
+# fixando o valor de Y
+    glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, -1.0)    
+    glTexCoord2f(1.0, 0.0); glVertex3f( 1.0, -1.0, -1.0)   
+    glTexCoord2f(1.0, 1.0); glVertex3f( 1.0, -1.0,  1.0)   
+    glTexCoord2f(0.0, 1.0); glVertex3f(-1.0, -1.0,  1.0)  
 
-        glTexCoord2f(0.0, 0.0); glVertex3f(-1.0,  1.0, -1.0)    
-        glTexCoord2f(1.0, 0.0); glVertex3f( 1.0,  1.0, -1.0)   
-        glTexCoord2f(1.0, 1.0); glVertex3f( 1.0,  1.0,  1.0)   
-        glTexCoord2f(0.0, 1.0); glVertex3f(-1.0,  1.0,  1.0) 
+    glTexCoord2f(0.0, 0.0); glVertex3f(-1.0,  1.0, -1.0)    
+    glTexCoord2f(1.0, 0.0); glVertex3f( 1.0,  1.0, -1.0)   
+    glTexCoord2f(1.0, 1.0); glVertex3f( 1.0,  1.0,  1.0)   
+    glTexCoord2f(0.0, 1.0); glVertex3f(-1.0,  1.0,  1.0) 
         
-    # fixando o valor de X
-        glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, -1.0)    
-        glTexCoord2f(1.0, 0.0); glVertex3f(-1.0,  1.0, -1.0)   
-        glTexCoord2f(1.0, 1.0); glVertex3f(-1.0,  1.0,  1.0)   
-        glTexCoord2f(0.0, 1.0); glVertex3f(-1.0, -1.0,  1.0)  
+# fixando o valor de X
+    glTexCoord2f(0.0, 0.0); glVertex3f(-1.0, -1.0, -1.0)    
+    glTexCoord2f(1.0, 0.0); glVertex3f(-1.0,  1.0, -1.0)   
+    glTexCoord2f(1.0, 1.0); glVertex3f(-1.0,  1.0,  1.0)   
+    glTexCoord2f(0.0, 1.0); glVertex3f(-1.0, -1.0,  1.0)  
 
-        glTexCoord2f(0.0, 0.0); glVertex3f(1.0, -1.0, -1.0)    
-        glTexCoord2f(1.0, 0.0); glVertex3f(1.0,  1.0, -1.0)   
-        glTexCoord2f(1.0, 1.0); glVertex3f(1.0,  1.0,  1.0)   
-        glTexCoord2f(0.0, 1.0); glVertex3f(1.0, -1.0,  1.0)
+    glTexCoord2f(0.0, 0.0); glVertex3f(1.0, -1.0, -1.0)    
+    glTexCoord2f(1.0, 0.0); glVertex3f(1.0,  1.0, -1.0)   
+    glTexCoord2f(1.0, 1.0); glVertex3f(1.0,  1.0,  1.0)   
+    glTexCoord2f(0.0, 1.0); glVertex3f(1.0, -1.0,  1.0)
+
     glEnd()
     a += 0.0035
 
